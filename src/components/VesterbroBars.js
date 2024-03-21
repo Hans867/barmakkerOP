@@ -8,7 +8,12 @@ function VesterbroBars() {
     async function fetchBars() {
       try {
         const vesterbroBars = await fetchVesterbroBars();
-        setBars(vesterbroBars.local_results);
+        // Check if local_results is an array
+        if (Array.isArray(vesterbroBars.local_results)) {
+          setBars(vesterbroBars.local_results);
+        } else {
+          console.error('Local results is not an array:', vesterbroBars);
+        }
       } catch (error) {
         console.error('Error fetching bars:', error);
       }
@@ -18,19 +23,18 @@ function VesterbroBars() {
   }, []);
 
   return (
-    <div>
-      <h2>Vesterbro Bars</h2>
-      <ul>
-        {bars.map((bar, index) => (
-          <li key={index}>
-            <h3>{bar.title}</h3>
-            <p>Address: {bar.address}</p>
-            <p>Rating: {bar.rating}</p>
-            
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div>
+        <h2>Vesterbro Bars</h2>
+        <ul>
+          {bars.map((bar, index) => (
+              <li key={index}>
+                <h3>{bar.title}</h3>
+                <p>Address: {bar.address}</p>
+                <p>Rating: {bar.rating}</p>
+              </li>
+          ))}
+        </ul>
+      </div>
   );
 }
 
