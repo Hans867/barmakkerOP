@@ -30,7 +30,7 @@ function VesterbroBars() {
               <li key={index}>
                 <h3>{bar.title}</h3>
                 <p>Address: {bar.address}</p>
-                <p>Rating: {bar.rating}</p>
+
               </li>
           ))}
         </ul>

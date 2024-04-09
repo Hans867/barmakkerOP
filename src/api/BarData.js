@@ -1,12 +1,14 @@
 const apiKey = process.env.REACT_APP_API_KEY;
 
 export async function fetchVesterbroBars() {
-    const url = `https://serpapi.com/search.json?engine=google_maps&q=bar+Vesterbro,+København&type=search&api_key=${apiKey}`;
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error('Network response was not ok');
+    try {
+        const response = await fetch(`https://serpapi.com/search.json?engine=google_maps&q=bar+Vesterbro,+København&type=search&api_key=${apiKey}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching Vesterbro bars:', error);
+        throw error;
     }
-    return response.json();
 }
 
 export async function fetchOsterbroBars() {
