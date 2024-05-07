@@ -1,4 +1,5 @@
 import React from 'react';
+import './FrederiksbergBars.css'
 
 
 function FrederiksbergBars({ barsData }) {
@@ -23,3 +24,4 @@ function FrederiksbergBars({ barsData }) {
 }
 
 export default FrederiksbergBars;
+

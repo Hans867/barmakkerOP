@@ -1,0 +1,52 @@
+/* Main.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFF1AF; /* Light yellow background */
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #66806A; /* Dark green title */
+}
+
+.location-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.location-button {
+    margin: 0 20px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.location-button img {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.location-button:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Apply different background colors to location buttons */
+#vesterbro-button {
+    background-color: #B4C6A6; /* Light green background for Vesterbro */
+}
+
+#nørrebro-button {
+    background-color: #FFC286; /* Light orange background for Nørrebro */
+}
+
+/* Add more button IDs and colors as needed */

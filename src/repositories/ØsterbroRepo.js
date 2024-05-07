@@ -1,6 +1,5 @@
 const oesterbroBarsRepo = [
-    {
-        "local_results": [
+
             {
                 "position": 1,
                 "title": "Østerbros Perle Pub",
@@ -922,8 +921,6 @@ const oesterbroBarsRepo = [
                     "delivery": false
                 }
             }
-        ]
-    }
 ]
 
 export default oesterbroBarsRepo;

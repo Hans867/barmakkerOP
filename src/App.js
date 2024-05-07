@@ -13,11 +13,14 @@ import NørrebroRepo from "./repositories/NørrebroRepo";
 import VesterbroRepo from "./repositories/VesterbroRepo";
 import ØsterbroRepo from "./repositories/ØsterbroRepo";
 
+import HomePage from "./main/Main";
+
 function App() {
     return (
         <Router>
             <div className="App">
                 <Routes>
+                    <Route path="/" element={<HomePage />} /> {/* Render HomePage for the root route */}
                     <Route path="/VesterbroBars" element={<VesterbroBars barsData={VesterbroRepo} />} />
                     <Route path="/ØsterbroBars" element={<ØsterbroBars barsData={ØsterbroRepo} />} />
                     <Route path="/NørrebroBars" element={<NørrebroBars barsData={NørrebroRepo} />} />
