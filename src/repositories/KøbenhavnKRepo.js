@@ -1,7 +1,6 @@
 const copenhagenKBars = [
 
-    {
-        "local_results": [
+
             {
                 "position": 1,
                 "title": "Bar'Vin",
@@ -945,10 +944,7 @@ const copenhagenKBars = [
                     "dine_in": true,
                     "takeout": false,
                     "delivery": false
-                },
-                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipMNw9AaKQl3fhqkaMJgTEPuS0VruynKgOKft06u=w163-h92-k-no"
-            }
-        ]
+                }
     }
 ]
 

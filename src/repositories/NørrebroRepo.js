@@ -1,7 +1,5 @@
 const noerrebroBarsRepo = [
-    {
 
-        "local_results": [
             {
                 "position": 1,
                 "title": "Temple Bar",
@@ -923,10 +921,7 @@ const noerrebroBarsRepo = [
                     "dine_in": true,
                     "takeout": false,
                     "delivery": false
-                },
-                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPtq8_M6iX1FgzpI8ZlgZdiEfaNYiTTHPm3oOSE=w92-h92-k-no"
-            }
-        ]
+                }
     }
 ]
 

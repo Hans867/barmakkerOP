@@ -1,41 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { fetchVesterbroBars } from '../api/BarData';
+import React from 'react';
+import './FrederiksbergBars.css'
 
-function VesterbroBars() {
-  const [bars, setBars] = useState([]);
 
-  useEffect(() => {
-    async function fetchBars() {
-      try {
-        const vesterbroBars = await fetchVesterbroBars();
-        // Check if local_results is an array
-        if (Array.isArray(vesterbroBars.local_results)) {
-          setBars(vesterbroBars.local_results);
-        } else {
-          console.error('Local results is not an array:', vesterbroBars);
-        }
-      } catch (error) {
-        console.error('Error fetching bars:', error);
-      }
-    }
-
-    fetchBars();
-  }, []);
-
+function Vesterbrobars({ barsData }) {
   return (
       <div>
-        <h2>Vesterbro Bars</h2>
-        <ul>
-          {bars.map((bar, index) => (
-              <li key={index}>
-                <h3>{bar.title}</h3>
-                <p>Address: {bar.address}</p>
-
-              </li>
+        <h1>Bars in Vesterbro</h1>
+        <div>
+          {barsData.map((bar, index) => (
+              <div key={index}>
+                <h2>{bar.title}</h2>
+                <p>{bar.address}</p>
+                <p>Rating: {bar.rating}</p>
+                <p>Price: {bar.price}</p>
+                <p>Open hours: {bar.hours}</p>
+                {/* You can add more information as needed */}
+                <hr />
+              </div>
           ))}
-        </ul>
+        </div>
       </div>
   );
 }
 
-export default VesterbroBars;
+export default Vesterbrobars;
+

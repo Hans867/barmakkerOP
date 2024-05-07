@@ -1,7 +1,5 @@
 const frederiksbergBarsRepo = [
-    {
-
-        "local_results": [
+    
             {
                 "position": 1,
                 "title": "Vinstuen 29",
@@ -920,10 +918,8 @@ const frederiksbergBarsRepo = [
                 "service_options": {
                     "dine_in": true,
                     "delivery": false
-                },
-                "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=ChsnMroD4bbW97GAP1dccg&cb_client=search.gws-prod.gps&w=80&h=92&yaw=187.98882&pitch=0&thumbfov=100"
-            }
-        ]
+                }
+
     }
 ]
 

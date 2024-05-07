@@ -1,7 +1,5 @@
 const vesterbroBarsRepo = [
-    {
 
-        "local_results": [
             {
                 "position": 1,
                 "title": "Fermentoren",
@@ -944,11 +942,9 @@ const vesterbroBarsRepo = [
                 "service_options": {
                     "dine_in": true,
                     "delivery": false
-                },
-                "thumbnail": "https://lh5.googleusercontent.com/p/AF1QipPHWZD5a7xABlpjUponEh2T0AYW8hfeIsWot9zL=w168-h92-k-no"
-            }
-        ]
+                }
     }
+
     ]
 
 export default vesterbroBarsRepo;
