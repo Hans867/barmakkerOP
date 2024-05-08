@@ -1,0 +1,9 @@
+.opening-hours {
+    list-style-type: none; /* Fjerner de sorte prikker */
+    padding-left: 0; /* Fjerner indrykning */
+}
+
+.day {
+
+    text-transform: capitalize; /* Gør den første bogstav stort */
+}
