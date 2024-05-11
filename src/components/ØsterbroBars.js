@@ -1,14 +1,14 @@
 import React from 'react';
-import './FrederiksbergBars.css'
+import './ØsterbroBars.css'
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function ØsterbroBars({ barsData }) {
+function ØsterbroBars ({ barsData }) {
     return (
         <div>
-            <h1>Bars in København K</h1>
+            <h1>Bars in Østerbro</h1>
             <div>
                 {barsData.map((bar, index) => (
                     <div key={index}>
@@ -19,7 +19,7 @@ function ØsterbroBars({ barsData }) {
                         <p>Price: {bar.price}</p>
                         <h4>Opening Hours</h4>
                         <ul className="opening-hours">
-                            {Object.entries(bar.operating_hours).map(([day, hours]) => (
+                            {bar.operating_hours && Object.entries(bar.operating_hours).map(([day, hours]) => (
                                 <li key={day}>
                                     <span className="day">{capitalizeFirstLetter(day)}:</span> {hours}
                                 </li>
@@ -35,4 +35,3 @@ function ØsterbroBars({ barsData }) {
 }
 
 export default ØsterbroBars;
-

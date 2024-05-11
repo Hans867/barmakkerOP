@@ -8,7 +8,7 @@ function capitalizeFirstLetter(string) {
 function FrederiksbergBars({ barsData }) {
     return (
         <div>
-            <h1>Bars in København K</h1>
+            <h1>Bars in Frederiksberg</h1>
             <div>
                 {barsData.map((bar, index) => (
                     <div key={index}>
@@ -19,7 +19,7 @@ function FrederiksbergBars({ barsData }) {
                         <p>Price: {bar.price}</p>
                         <h4>Opening Hours</h4>
                         <ul className="opening-hours">
-                            {Object.entries(bar.operating_hours).map(([day, hours]) => (
+                            {bar.operating_hours && Object.entries(bar.operating_hours).map(([day, hours]) => (
                                 <li key={day}>
                                     <span className="day">{capitalizeFirstLetter(day)}:</span> {hours}
                                 </li>
@@ -35,4 +35,3 @@ function FrederiksbergBars({ barsData }) {
 }
 
 export default FrederiksbergBars;
-

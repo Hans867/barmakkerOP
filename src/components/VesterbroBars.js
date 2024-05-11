@@ -1,5 +1,5 @@
 import React from 'react';
-import './FrederiksbergBars.css'
+import './VesterbroBars.css'
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -8,7 +8,7 @@ function capitalizeFirstLetter(string) {
 function Vesterbrobars({ barsData }) {
   return (
       <div>
-          <h1>Bars in København K</h1>
+          <h1>Bars in Vesterbro </h1>
           <div>
               {barsData.map((bar, index) => (
                   <div key={index}>
